@@ -1,0 +1,9 @@
+int[] list = {5,2,3,4,1};
+int max = Integer.MIN_VALUE;
+for(int i = 1; i < list.length; i++) {
+	if(list[i] > max) {
+		max = list[i];
+	}
+}
+return max;
+
