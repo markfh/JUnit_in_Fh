@@ -1,3 +1,5 @@
 classes/*
 reports/*
 cob*
+bin/*
+*.class
