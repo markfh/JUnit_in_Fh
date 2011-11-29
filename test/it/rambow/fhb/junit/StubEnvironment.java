@@ -1,6 +1,6 @@
 package it.rambow.fhb.junit;
 
-public class MockEnvironment implements Environmental {
+public class StubEnvironment implements Environmental {
 	private long curr_time;
 	
 	public void setCurrTime(long time) {

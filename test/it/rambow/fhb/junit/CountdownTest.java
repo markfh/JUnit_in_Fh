@@ -14,9 +14,9 @@ public class CountdownTest {
 	private GregorianCalendar gc_start, gc_end;
 	private Match match;
 	private Countdown cd;
-	private Environmental env_1959 = new MockEnvironment();
-	private Environmental env_2015 = new MockEnvironment();
-	private Environmental env_2315 = new MockEnvironment();
+	private Environmental env_1959 = new StubEnvironment();
+	private Environmental env_2015 = new StubEnvironment();
+	private Environmental env_2315 = new StubEnvironment();
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
