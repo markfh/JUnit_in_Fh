@@ -94,6 +94,7 @@
 
 	<target name="cob-rep" depends="cob-instr, test" description="erzeugt Cobertura Reports">
 		<cobertura-report format="html" datafile="${cobdata}" destdir="${cob.rep.html}" srcdir="${src.dir}" />
+		<cobertura-report format="xml" datafile="${cobdata}" destdir="${cob.rep.xml}" srcdir="${src.dir}" />
 	</target>
 
 	
