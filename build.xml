@@ -8,7 +8,7 @@
 
 	<property file="build.properties" />
 
-	<path id="junit.classpath">
+	<path id="all_in_one.classpath">
 		<fileset dir="${lib.dir}">
 			<include name="*.jar" />
 		</fileset>
@@ -28,10 +28,10 @@
 
 	<target name="compile" depends="init">
 		<javac srcdir="${src.dir}" destdir="${classes.dir}" debug="yes">
-			<classpath refid="junit.classpath" />
+			<classpath refid="all_in_one.classpath" />
 		</javac>
 		<javac srcdir="${test.dir}" destdir="${classes.dir}" debug="yes">
-			<classpath refid="junit.classpath" />
+			<classpath refid="all_in_one.classpath" />
 		</javac>
 	</target>
 
@@ -42,7 +42,7 @@
 		 	<classpath location="${inst.dir}" />
 		 	
 			<classpath location="${classes.dir}" />
-			<classpath refid="junit.classpath" />
+			<classpath refid="all_in_one.classpath" />
 		 	
 		 	<formatter type="brief" usefile="false"/>
 			<formatter type="xml" />
@@ -81,7 +81,7 @@
 	<!-- =================================
 		          target: Cobertura
 		 ================================= -->
-	<taskdef classpathref="junit.classpath" resource="tasks.properties" />
+	<taskdef classpathref="all_in_one.classpath" resource="tasks.properties" />
 	<target name="cob-instr" depends="compile">
 		<cobertura-instrument todir="${inst.dir}" datafile="${cobdata}">
 		    <fileset dir="${classes.dir}">
